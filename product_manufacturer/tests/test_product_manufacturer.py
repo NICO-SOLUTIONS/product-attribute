@@ -8,7 +8,6 @@ class TestProductManufacturer(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.manufacturer_a = cls.env["res.partner"].create({"name": "Manufacturer A"})
         cls.manufacturer_b = cls.env["res.partner"].create({"name": "Manufacturer B"})
         cls.attr1 = cls.env["product.attribute"].create({"name": "color"})
